@@ -1,0 +1,53 @@
+<div class="pageTitle">
+  <h2 class="pageTitle_text">予定一覧</h2>
+  <%= link_to "新規追加", :new_schedule, class: "btn_a hover-darken" %>
+</div>
+
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>タイトル</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>終日</th>
+        <th>更新日時</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @schedules.each do |schedule| %>
+        <tr>
+          <td><%= schedule.id %></td>
+          <td><%= schedule.title %></td>
+          <td><%= schedule.start_date.to_s(:date_jp) %></td>
+          <td><%= schedule.end_date.to_s(:date_jp) %></td>
+          <td><%= "◯" if schedule.all_day%></td>
+          <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
+          <td>
+            <%= link_to "詳細", schedule %>
+          </td>
+          <td>
+            <%= link_to "編集", [:edit, schedule] %>
+          </td>
+          <td>
+            <%= link_to "削除", schedule, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <footer>
+    <p class="scheduleCount">予定合計：<%= @schedule_count %> 件</p>
+    <p class="currentDateTime">本日の日付：<%= @today.strftime('%Y/%m/%d') %></p>
+  </footer>
+</div>
