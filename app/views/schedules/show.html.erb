@@ -1,0 +1,31 @@
+<div class="show_page">
+  <div>
+      <%= link_to "一覧に戻る", :schedules, class: "back hover-darken" %>
+  </div>
+
+  <div class="pageTitle">
+    <h2 class="pageTitle_text"><%= @schedule.title %></h2>
+    <%= link_to "編集", :edit_schedule, class: "btn_a hover-darken" %>
+  </div>
+
+  <table class="show_table">
+    <tbody class="show_tbody">
+      <tr>
+        <th>開始日</th>
+        <td><%= @schedule.start_date %></td>
+      </tr>
+      <tr>
+        <th>終了日</th>
+        <td><%= @schedule.end_date %></td>
+      </tr>
+      <tr>
+        <th>終日</th>
+        <td><%= "◯" if @schedule.all_day %></td>
+      </tr>
+      <tr>
+        <th>スケジュールメモ</th>
+        <td><%= @schedule.memo %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

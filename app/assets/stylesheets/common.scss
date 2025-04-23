@@ -1,0 +1,283 @@
+/*全体*/
+body{
+    margin: 0;
+    font-family: Yu Gothic Medium, 游ゴシック Medium, YuGothic, 游ゴシック体, ヒラギノ角ゴ Pro W3, メイリオ, sans-serif;
+    background-color: #f6f6f6;
+    color: #333;
+}
+
+/*ヘッダー*/
+.navbar{
+    background-color: #1c1d3b;
+    height: 50px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appTitle{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/*main*/
+.mainContainer{
+    max-width: 980px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pageTitle{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+
+.pageTitle_text{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+
+/*予定一覧*/
+.btn_a{
+    background-color: #2962ff;
+    color: #fff;
+    border-color: #0d6efd;
+    font-size: 14px;
+    font-weight: 700;
+    height: 22px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn_b{
+    background-color: #2962ff;
+    color: #fff;
+    border-color: #0d6efd;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn_c{
+    background-color: #fff;
+    color: #212529;
+    border: 1px solid gray;
+    font-size: 14px;
+    font-weight: 700;
+    height: 22px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.table{
+    box-shadow: 0 0 1px rgba(0, 0, 0, .02), 0 1px 3px rgba(50, 50, 93, .15);
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    width: 100%;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+.table th, .table td {
+    border-top: 1px solid #ccc; /* ←横線だけ表示 */
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 10px 16px;
+  }
+
+.table tr:first-child th {
+    border-top: none; /* ←ヘッダーの上には線を出さない */
+  }
+  
+
+tbody, td, th, thead, tr{
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+table th {
+    padding: 10px 16px;
+    word-break: keep-all;
+}
+
+table td {
+    padding: 20px 16px;
+    word-break: keep-all;
+}
+
+.notice {
+    background-color: #CDF;
+    padding: 5px;
+}
+
+.back{
+    text-decoration: none;
+    color: blue;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.hover-darken {
+    transition: filter 0.2s ease;
+  }
+  
+.hover-darken:hover {
+    filter: brightness(85%);
+  }
+  
+/*詳細画面*/
+.show_page{
+    max-width: 640px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .show_table th, .show_table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .show_table th {
+    width: 140px;
+    background-color: #f8f8f8;
+    color: #555;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  
+  .show_table td {
+    color: #333;
+    font-size: 14px;
+  }
+  
+/*新規登録・編集画面*/
+.new_page, .edit_page{
+    max-width: 640px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formFrame{
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .02), 0 1px 3px rgba(50, 50, 93, .15);
+    height: -moz-fit-content;
+    margin: 18px auto 0;
+    padding: 24px;
+}
+
+.date_form{
+    display: flex;
+}
+
+.input_item{
+    padding: 0 8px;
+    margin-top: 16px;
+}
+
+.start_end_date{
+    width: 50%;
+}
+
+.form_label{
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.form-control{
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-cntl_1{
+    height: 45px;
+}
+
+/*フォーム入力*/
+label.Form__label--required::after {
+    content: "✳︎"; /* ←ここを変更すれば文字変えられる */
+    color: #ff4949;
+    font-size: 14px;
+    margin-left: 4px;
+  }
+
+label{
+    font-weight: 700;
+}
+
+label, p{
+    font-size: 14px;
+}
+
+.allDay_check{
+    display: flex;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.checkbox{
+    border: 2px solid #a2a2a4;
+    margin-right: 12px;
+    height: 18px;
+    width: 18px;
+}
+
+.allday_Text{
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.new_edit_btn{
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+}
+
+.cancel{
+    margin-right: 10px;
+}
+
+/*フッター*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-top: 14px;
+    padding: 0 20px;
+}
